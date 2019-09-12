@@ -23,3 +23,5 @@ Route.get('/', () => {
 Route.post('/api/challenges', 'ChallengeController.store')
   .validator('CreateChallenge')
   .middleware(['auth']);
+Route.get('/api/challenges', 'ChallengeController.all');
+Route.get('/api/challenges/:id', 'ChallengeController.show');
